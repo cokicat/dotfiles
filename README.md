@@ -9,9 +9,10 @@
 
 ## Terminals
 - kitty
-- urxvt
 - xfce4-teminal
+- urxvt
 
 ## Editors
-- mousepad
+- nano
 - xed
+- mousepad
