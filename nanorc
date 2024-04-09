@@ -1,0 +1,29 @@
+## Syntax coloring
+include "/usr/share/nano/*.nanorc"
+
+## UI customization
+set mouse
+set linenumbers
+set indicator
+set minibar
+
+## UI colors
+set titlecolor black,brightwhite
+set promptcolor black,brightwhite
+set errorcolor bold,white,red
+set selectedcolor bold,brightblack,white
+set scrollercolor brightblack
+set numbercolor brightblack
+set keycolor black,brightwhite
+set functioncolor brightwhite
+
+## Miscellaneous
+set tabsize 4
+set historylog
+set positionlog
+
+## Key bindings
+bind ^Z undo main
+bind ^Y redo main
+bind ^E execute main
+bind ^F whereis main
