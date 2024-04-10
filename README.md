@@ -1,32 +1,40 @@
 # cokicat's dotfiles
 
-There are my dotfiles for a simple and lightweight desktop.
+Here are my dotfiles for a simple and lightweight desktop.
 
-## Fonts
-- ubuntu
-- ubuntu-mono
+## License
+My dotfiles aren't licensed except for jwmrc file (based on [phono-theme](https://github.com/cbettinger/phono-theme) by [cbettinger](https://github.com/cbettinger/)), which is distributed under the ISC License.  
+See LICENSE_jwmrc for the full terms of the license.
 
-## Window Managers
+### Fonts
+- `ubuntu`
+- `ubuntu-mono`
+
+### Window Managers
 - JWM
 - Fluxbox
 
-## JWM theme
+### JWM theme
 - [phono-theme](https://github.com/cbettinger/phono-theme) by cbettinger
 
-## Shells
-- bash
+### Icon themes
+- icons: `papirus-icon-theme`
+- mouse: `adwaita-icon-theme`
 
-## Terminals
-- kitty
-- xfce4-teminal
-- urxvt
+### Shells
+- `bash`
 
-## Editors
-- nano
-- micro
-- xed
-- mousepad
+### Terminals
+- `kitty`
+- `xfce4-teminal`
+- `urxvt`
 
-## Others
-- htop
-- btop
+### Editors
+- `nano`
+- `micro`
+- `xed`
+- `mousepad`
+
+### Utilisties
+- `htop`
+- `btop`

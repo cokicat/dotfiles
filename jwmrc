@@ -1,12 +1,11 @@
 <!--
 Based on phono-theme by cbettinger, made by cokicat.
-
 This file is distributed under the ISC License. See LICENSE_jwmrc for full terms of the license.
 -->
 
 <?xml version="1.0"?>
 <JWM>
-    <!-- The root menu. -->
+    <!-- root menu -->
     <RootMenu onroot="12">
         <Program icon="utilities-terminal" label="urxvt">urxvt</Program>
         <Program icon="thunar" label="Thunar">thunar</Program>
@@ -42,9 +41,13 @@ This file is distributed under the ISC License. See LICENSE_jwmrc for full terms
     </Tray>
 
     <!-- Startup Commands -->
+    <!-- Set your screen resolution -->
     <StartupCommand>xrandr -s 1920x1080</StartupCommand>
+    <!-- Set your keyboard layout -->
     <StartupCommand>setxkbmap fr</StartupCommand>
-    
+    <!-- Set your background -->
+    <StartupCommand>feh --bg-scale ~/background.png</StartupCommand>   
+
     <MenuStyle>
 	<Font>Ubuntu-11:bold</Font>
 	<Outline>#1B1A18</Outline>
@@ -72,15 +75,11 @@ This file is distributed under the ISC License. See LICENSE_jwmrc for full terms
     <PagerStyle>
         <Font>Ubuntu-11</Font>
 	<Outline>#1B1A18</Outline>
-	<!-- Inactive Desktop Background -->
 	<Background>#2A2A2A</Background>
-	<!-- Unfocused Window -->
 	<Foreground>#D3D8D2</Foreground>
 	<Text>#F2B826</Text>
 	<Active>
-		<!-- Active Desktop Background -->
 		<Background>#5B4A3A</Background>
-		<!-- Focused Window -->
 		<Foreground>#F2B826</Foreground>
 	</Active>
     </PagerStyle>
@@ -124,16 +123,12 @@ This file is distributed under the ISC License. See LICENSE_jwmrc for full terms
          IconPath can be listed multiple times to allow searching
          for icons in multiple paths.
       -->
-    <IconPath>/usr/share/icons/Adwaita/64x64/apps/</IconPath>
+    <IconPath>/usr/share/icons/Papirus-Dark/32x32/apps</IconPath>
     <IconPath>$HOME/.icons</IconPath>
 
     <!-- Virtual Desktops -->
     <!-- Desktop tags can be contained within Desktops for desktop names. -->
     <Desktops width="4" height="1">
-        <!-- Default background. Note that a Background tag can be
-              contained within a Desktop tag to give a specific background
-              for that desktop.
-         -->
         <Background type="solid">#111111</Background>
     </Desktops>
 
@@ -144,7 +139,7 @@ This file is distributed under the ISC License. See LICENSE_jwmrc for full terms
     <DoubleClickDelta>2</DoubleClickDelta>
 
     <!-- The focus model (sloppy or click) -->
-    <FocusModel>click</FocusModel>
+    <FocusModel>sloppy</FocusModel>
 
     <!-- The snap mode (none, screen, or border) -->
     <SnapMode distance="10">border</SnapMode>
