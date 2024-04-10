@@ -1,8 +1,14 @@
+<!--
+Based on phono-theme by cbettinger, made by cokicat.
+
+This file is distributed under the ISC License. See LICENSE_jwmrc for full terms of the license.
+-->
+
 <?xml version="1.0"?>
 <JWM>
     <!-- The root menu. -->
     <RootMenu onroot="12">
-        <Program icon="utilities-terminal" label="xterm">xterm -fa "Ubuntu Mono" -bg black -fg white</Program>
+        <Program icon="utilities-terminal" label="urxvt">urxvt</Program>
         <Program icon="thunar" label="Thunar">thunar</Program>
 	<Program icon="arandr" label="ARandR">arandr</Program>
         <Separator/>
@@ -30,7 +36,7 @@
         <Spacer width="6"/>
         <Pager labeled="true"/>
         <Spacer width="6"/>
-        <TaskList maxwidth="256"/>
+        <TaskList/>
         <Spacer width="6"/>
         <TrayButton label="_">showdesktop</TrayButton>
     </Tray>
@@ -38,8 +44,7 @@
     <!-- Startup Commands -->
     <StartupCommand>xrandr -s 1920x1080</StartupCommand>
     <StartupCommand>setxkbmap fr</StartupCommand>
-    <!--StartupCommand></StartupCommand-->
-
+    
     <MenuStyle>
 	<Font>Ubuntu-11:bold</Font>
 	<Outline>#1B1A18</Outline>
