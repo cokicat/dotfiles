@@ -1,0 +1,2 @@
+PS1='\[\e[1m\]\h\[\e[0m\]: \[\e[1m\]\u\[\e[0m\] at \w\n-> '
+alias cls=clear

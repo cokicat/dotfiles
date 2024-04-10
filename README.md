@@ -16,3 +16,7 @@
 - nano
 - xed
 - mousepad
+
+## Others
+- htop
+- btop
