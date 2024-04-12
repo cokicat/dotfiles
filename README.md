@@ -26,13 +26,12 @@ See LICENSE_jwmrc for the full terms of the license.
 
 ### Terminals
 - `kitty`
-- `xfce4-teminal`
+- `cool-retro-term`
 - `urxvt`
 
 ### Editors
 - `nano`
 - `micro`
-- `xed`
 - `mousepad`
 
 ### Utilisties
