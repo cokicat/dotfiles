@@ -34,6 +34,8 @@ See LICENSE_jwmrc for the full terms of the license.
 - `micro`
 - `mousepad`
 
-### Utilisties
+### Others
 - `htop`
-- `btop`
+- cbtop`
+-`picom`
+
