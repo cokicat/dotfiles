@@ -1,205 +1,168 @@
-<!--
-Based on phono-theme by cbettinger, made by cokicat.
-This file is distributed under the ISC License. See LICENSE_jwmrc for full terms of the license.
--->
-
 <?xml version="1.0"?>
 <JWM>
-    <!-- root menu -->
-    <RootMenu onroot="12">
-        <Program icon="utilities-terminal" label="urxvt">urxvt</Program>
-        <Program icon="thunar" label="Thunar">thunar</Program>
-	<Program icon="arandr" label="ARandR">arandr</Program>
-        <Separator/>
-        <Restart label="Restart" icon="reload"/>
-        <Exit label="Exit" confirm="true" icon="exit"/>
-    </RootMenu>
+	<!--
+	Based on phono-theme by Christian Bettinger (https://github.com/cbettinger), made by cokicat.
+	This file is distributed under the ISC License. See LICENSE_jwmrc for full terms of the license.
 
-    <!-- Options for program groups. -->
-    <Group>
-        <Option>tiled</Option>
-    </Group>
-    <Group>
-        <Name>xterm</Name>
-        <Option>vmax</Option>
-    </Group>
-    <Group>
-        <Name>xclock</Name>
-        <Option>drag</Option>
-        <Option>notitle</Option>
-    </Group>
+	JWM version: 2.3
+	-->
+	<!-- root menu -->
+	<RootMenu onroot="3">
+		<Program label="kitty">kitty</Program>
+		<!-- Include menu -->
+		<Include>$HOME/.jwmmenu</Include>
+		<Separator/>
+		<Exit confirm="true" label="Exit"/>
+		<Restart label="Reload" icon="reload"/>
+		<Program label="Restart">reboot</Program>
+		<Program label="Shutdown">poweroff</Program>
+	</RootMenu>
 
-    <!-- Tray at the bottom. -->
-    <Tray x="0" y="-1" height="25" autohide="off" delay="1000">
-        <TrayButton icon="/usr/share/jwm/jwm-orange.svg">root:1</TrayButton>
-        <Spacer width="6"/>
-        <Pager labeled="true"/>
-        <Spacer width="6"/>
-        <TaskList/>
-        <Spacer width="6"/>
-        <TrayButton label="_">showdesktop</TrayButton>
-    </Tray>
 
-    <!-- Startup Commands -->
-    <!-- Set your screen resolution -->
-    <StartupCommand>xrandr -s 1920x1080</StartupCommand>
-    <!-- Set your keyboard layout -->
-    <StartupCommand>setxkbmap fr</StartupCommand>
-    <!-- Set your background -->
-    <StartupCommand>feh --bg-scale ~/background.png</StartupCommand>   
 
-    <MenuStyle>
-	<Font>Ubuntu-11:bold</Font>
-	<Outline>#1B1A18</Outline>
-	<Background>#1B1A18</Background>
-	<Foreground>#D3D8D2</Foreground>
-	<Active>
-		<Background>#1B1A18</Background>
-		<Foreground>#F2B826</Foreground>
-	</Active>
-	<Opacity>1.0</Opacity>
-    </MenuStyle>
 
-    <TrayStyle group="false" list="all">
-	<Font>Ubuntu-11:bold</Font>
-	<Outline>#1B1A18</Outline>
-	<Background>#1B1A18</Background>
-	<Foreground>#D3D8D2</Foreground>
-	<Active>
-		<Background>#1B1A18</Background>
-		<Foreground>#F2B826</Foreground>
-	</Active>
-	<Opacity>1.0</Opacity>
-    </TrayStyle>
+	<!-- Main configuration -->
+	<Desktops width="4" height="1">
+		<Background type="solid">#000000</Background>
+	</Desktops>
 
-    <PagerStyle>
-        <Font>Ubuntu-11</Font>
-	<Outline>#1B1A18</Outline>
-	<Background>#2A2A2A</Background>
-	<Foreground>#D3D8D2</Foreground>
-	<Text>#F2B826</Text>
-	<Active>
-		<Background>#5B4A3A</Background>
-		<Foreground>#F2B826</Foreground>
-	</Active>
-    </PagerStyle>
+	<FocusModel>sloppy</FocusModel>
+	<SnapMode distance="10">border</SnapMode>
+	<MoveMode coordinates="off">outline</MoveMode>
+	<ResizeMode>outline</ResizeMode>
+	
+	<!-- Include startup commands -->
+	<Include>$HOME/.jwmstartup</Include>
+	<Group>
+		<Option>tiled</Option>
+		<Option>aerosnap</Option>
+	</Group>
 
-    <ClockStyle>
-	<Font>Ubuntu-11</Font>
-    </ClockStyle>
 
-    <WindowStyle>
-	<Font>Ubuntu-11:bold</Font>
-	<Width>2</Width>
-	<Height>24</Height>
-	<Corner>3</Corner>
-	<Outline>#1B1A18</Outline>
-	<Background>#1B1A18</Background>
-	<Foreground>#D3D8D2</Foreground>
-	<Opacity>0.618</Opacity>
-	<Active>
+
+
+	<!-- Tray configuration -->
+	<Tray x="0" y="-1" height="30" autohide="off">
+		<TrayButton icon="/usr/share/jwm/jwm-orange.svg">root:3</TrayButton>
+		<Spacer width="6"/>
+
+		<Pager labeled="true"/>
+		<Spacer width="6"/>
+
+		<TaskList/>
+		<Spacer width="6"/>
+		<Clock format="%H:%M"></Clock>
+		<TrayButton label="▐">showdesktop</TrayButton>
+	</Tray>
+
+
+
+
+	<!-- Styles configuration-->
+	<MenuStyle>
+		<Font>Ubuntu-11:bold</Font>
 		<Outline>#1B1A18</Outline>
 		<Background>#1B1A18</Background>
-		<Foreground>#F2B826</Foreground>
+		<Foreground>#D3D8D2</Foreground>
+		<Active>
+			<Background>#1B1A18</Background>
+			<Foreground>#F2B826</Foreground>
+		</Active>
 		<Opacity>1.0</Opacity>
-	</Active>
-    </WindowStyle>
+	</MenuStyle>
 
-    <PopupStyle enabled="false">
-	<Font>Ubuntu-11</Font>
-	<Outline>#1B1A18</Outline>
-	<Background>#1B1A18</Background>
-	<Foreground>#D3D8D2</Foreground>
-    </PopupStyle>
+	<TrayStyle group="false" list="all">
+		<Font>Ubuntu-11</Font>
+		<Outline>#1B1A18</Outline>
+		<Background>#1B1A18</Background>
+		<Foreground>#D3D8D2</Foreground>
+		<Active>
+			<Background>#1B1A18</Background>
+			<Foreground>#F2B826</Foreground>
+		</Active>
+		<Opacity>1.0</Opacity>
+	</TrayStyle>
 
-    <ButtonMin>minimize.png</ButtonMin>
-    <ButtonMax>maximize.png</ButtonMax>
-    <ButtonMaxActive>maximize.png</ButtonMaxActive>
-    <ButtonClose>close.png</ButtonClose>
+	<PagerStyle>
+		<Font>Ubuntu-11:bold</Font>
+		<Outline>#1B1A18</Outline>
+		<Background>#2A2A2A</Background>
+		<Foreground>#D3D8D2</Foreground>
+		<Text>#F2B826</Text>
+		<Active>
+			<Background>#5B4A3A</Background>
+			<Foreground>#F2B826</Foreground>
+		</Active>
+	</PagerStyle>
+	
+	<ClockStyle>
+		<Font>Ubuntu-11</Font>
+	</ClockStyle>
+
+	<WindowStyle>
+		<Font>Ubuntu-11:bold</Font>
+		<Width>2</Width>
+		<Height>24</Height>
+		<Corner>5</Corner>
+		<Outline>#1B1A18</Outline>
+		<Background>#1B1A18</Background>
+		<Foreground>#D3D8D2</Foreground>
+		<Opacity>1.0</Opacity>
+		<Active>
+			<Outline>#1B1A18</Outline>
+			<Background>#1B1A18</Background>
+			<Foreground>#F2B826</Foreground>
+			<Opacity>1.0</Opacity>
+		</Active>
+	</WindowStyle>
+
+	<PopupStyle enabled="false">
+		<Font>Ubuntu-11</Font>
+		<Outline>#1B1A18</Outline>
+		<Background>#1B1A18</Background>
+		<Foreground>#D3D8D2</Foreground>
+	</PopupStyle>
 
 
 
-    <!-- Path where icons can be found.
-         IconPath can be listed multiple times to allow searching
-         for icons in multiple paths.
-      -->
-    <IconPath>/usr/share/icons/Papirus-Dark/32x32/apps</IconPath>
-    <IconPath>$HOME/.icons</IconPath>
 
-    <!-- Virtual Desktops -->
-    <!-- Desktop tags can be contained within Desktops for desktop names. -->
-    <Desktops width="4" height="1">
-        <Background type="solid">#111111</Background>
-    </Desktops>
+	<!-- Icons configuration -->
+	<IconPath>$HOME/.icons</IconPath>
+	<IconPath>/usr/local/share/icons</IconPath>
+	<IconPath>/usr/local/share/pixmaps</IconPath>
+	<IconPath>/usr/local/lib/X11/icons</IconPath>
+	<IconPath>/usr/local/share/jwm</IconPath>
 
-    <!-- Double click speed (in milliseconds) -->
-    <DoubleClickSpeed>400</DoubleClickSpeed>
+	<ButtonMin>minimize.png</ButtonMin>
+	<ButtonMax>maximize.png</ButtonMax>
+	<ButtonMaxActive>maximize.png</ButtonMaxActive>
+	<ButtonClose>close.png</ButtonClose>
 
-    <!-- Double click delta (in pixels) -->
-    <DoubleClickDelta>2</DoubleClickDelta>
+	<!-- Keyboard shortcuts -->
+	<Key mask="4" key="Return">exec: kitty</Key>
 
-    <!-- The focus model (sloppy or click) -->
-    <FocusModel>sloppy</FocusModel>
+	<Key key="Up">up</Key>
+	<Key key="Down">down</Key>
+	<Key key="Right">right</Key>
+	<Key key="Left">left</Key>
+	<Key key="J">left</Key>
+    <Key key="K">down</Key>
+    <Key key="I">up</Key>
+    <Key key="L">right</Key>
+	<Key key="Return">select</Key>
+	<Key key="Escape">escape</Key>
 
-    <!-- The snap mode (none, screen, or border) -->
-    <SnapMode distance="10">border</SnapMode>
-
-    <!-- The move mode (outline or opaque) -->
-    <MoveMode>outline</MoveMode>
-
-    <!-- The resize mode (outline or opaque) -->
-    <ResizeMode>outline</ResizeMode>
-
-    <!-- Key bindings -->
-    <Key key="Up">up</Key>
-    <Key key="Down">down</Key>
-    <Key key="Right">right</Key>
-    <Key key="Left">left</Key>
-    <Key key="h">left</Key>
-    <Key key="j">down</Key>
-    <Key key="k">up</Key>
-    <Key key="l">right</Key>
-    <Key key="Return">select</Key>
-    <Key key="Escape">escape</Key>
-
-    <Key mask="A" key="Tab">nextstacked</Key>
+	<Key mask="A" key="Tab">nextstacked</Key>
     <Key mask="A" key="F4">close</Key>
-    <Key mask="A" key="#">desktop#</Key>
-    <Key mask="A" key="F1">root:1</Key>
-    <Key mask="A" key="F2">window</Key>
-    <Key mask="A" key="F10">maximize</Key>
-    <Key mask="A" key="Right">rdesktop</Key>
-    <Key mask="A" key="Left">ldesktop</Key>
-    <Key mask="A" key="Up">udesktop</Key>
-    <Key mask="A" key="Down">ddesktop</Key>
+	<Key mask="C, A" key="Left">ldesktop</Key>
+	<Key mask="C, A" key="Right">rdesktop</Key>
+	<Key mask="C, A" key="Up">udesktop</Key>
+	<Key mask="C, A" key="Down">ddesktop</Key>
 
-    <!-- Mouse bindings -->
-    <Mouse context="title" button="1">move</Mouse>
-    <Mouse context="title" button="2">move</Mouse>
-    <Mouse context="title" button="3">window</Mouse>
-    <Mouse context="title" button="4">shade</Mouse>
-    <Mouse context="title" button="5">shade</Mouse>
-    <Mouse context="title" button="11">maximize</Mouse>
+	<Key mask="4" key="Left">maxleft</Key>
+	<Key mask="4" key="Right">maxright</Key>
+	<Key mask="4" key="Up">maximize</Key>
+	<Key mask="4" key="Down">shade</Key>
 
-    <Mouse context="icon" button="1">window</Mouse>
-    <Mouse context="icon" button="2">move</Mouse>
-    <Mouse context="icon" button="3">window</Mouse>
-    <Mouse context="icon" button="4">shade</Mouse>
-    <Mouse context="icon" button="5">shade</Mouse>
-
-    <Mouse context="border" button="1">resize</Mouse>
-    <Mouse context="border" button="2">move</Mouse>
-    <Mouse context="border" button="3">window</Mouse>
-
-    <Mouse context="close" button="-1">close</Mouse>
-    <Mouse context="close" button="2">move</Mouse>
-    <Mouse context="close" button="-3">close</Mouse>
-
-    <Mouse context="maximize" button="-1">maximize</Mouse>
-    <Mouse context="maximize" button="-2">maxv</Mouse>
-    <Mouse context="maximize" button="-3">maxh</Mouse>
-
-    <Mouse context="minimize" button="-1">minimize</Mouse>
-    <Mouse context="minimize" button="2">move</Mouse>
-    <Mouse context="minimize" button="-3">shade</Mouse>
+	<Key mask="C, S" key="E">exit</Key>
 </JWM>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<!--
+Add your owm programs here e. g. :
+<Program label="Firefox">firefox</Program>
+-->
+
+<JWM>
+	<Progam label=""></Program>
+</JWM>
