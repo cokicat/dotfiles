@@ -6,7 +6,7 @@ Here are my dotfiles for a simple and lightweight desktop.
 - Icon Theme: [Papirus](https://www.pling.com/p/1166289) (`papirus-icon-theme`)
 - Mouse Theme: [Bibata Modern Ice](https://www.pling.com/p/1197198)
 - Shell: bash
-- Terminal: kitty
+- Terminal: kitty, foot
 - Editors: nano, micro
 - Task Manager: htop
 
