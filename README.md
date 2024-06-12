@@ -2,16 +2,17 @@
 
 Here are my dotfiles for a simple and lightweight desktop.
 
-- Window Managers: JWM, Fluxbox
+- Window Managers: JWM, Fluxbox, i3, Sway
 - Icon Theme: [Papirus](https://www.pling.com/p/1166289) (`papirus-icon-theme`)
 - Mouse Theme: [Bibata Modern Ice](https://www.pling.com/p/1197198)
 - Shell: bash
-- Terminal: kitty, foot
+- Terminals: kitty, foot
 - Editors: nano, micro
 - Task Manager: htop
 
 ## License
-My dotfiles aren't licensed except for jwmrc file (based on [phono-theme](https://github.com/cbettinger/phono-theme) by [cbettinger](https://github.com/cbettinger/)), which is distributed under the ISC License.  
+This repository include parts of Dracula Theme so it's licensed under MIT License. See LICENSE for the full terms of the license.
+[phono-theme](https://github.com/cbettinger/phono-theme) by [cbettinger](https://github.com/cbettinger/)), which is distributed under the ISC License.  
 See LICENSE_jwmrc for the full terms of the license.
 
 ## Dependencies

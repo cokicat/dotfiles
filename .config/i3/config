@@ -7,7 +7,7 @@
                                
 # Appearance
 
-# Colors
+# Color Theme (Dracula)
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
@@ -52,7 +52,9 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-exec --no-startup-id pipewire
+# For pipewire users
+#exec --no-startup-id pipewire
+
 exec --no-startup-id nm-applet
 exec --no-startup-id autotiling
 
@@ -78,7 +80,7 @@ bindsym $mod+Return exec kitty
 # Kill focused window
 bindsym $mod+Shift+q kill
 
-# Start dmenu
+# Start dmenu (color theme: Dracula)
 bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'sfmono-12' -p ' dmenu:'"
 
 # A more modern dmenu replacement is rofi:

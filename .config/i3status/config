@@ -2,6 +2,8 @@ general {
 	output_format = "i3bar"
         colors = true
         interval = 3
+
+	# Color Theme (Dracula)
 	color_good = "#50FA7B"
 	color_degraded = "#F1FA8C"
 	color_bad = "#FF5555"
