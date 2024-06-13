@@ -1,14 +1,33 @@
-# cokicat's dotfiles
+ ▄████▄   ▒█████   ██ ▄█▀ ██▓ ▄████▄   ▄▄▄     ▄▄▄█████▓  ██████ 
+▒██▀ ▀█  ▒██▒  ██▒ ██▄█▒ ▓██▒▒██▀ ▀█  ▒████▄   ▓  ██▒ ▓▒▒██    ▒ 
+▒▓█    ▄ ▒██░  ██▒▓███▄░ ▒██▒▒▓█    ▄ ▒██  ▀█▄ ▒ ▓██░ ▒░░ ▓██▄   
+▒▓▓▄ ▄██▒▒██   ██░▓██ █▄ ░██░▒▓▓▄ ▄██▒░██▄▄▄▄██░ ▓██▓ ░   ▒   ██▒
+▒ ▓███▀ ░░ ████▓▒░▒██▒ █▄░██░▒ ▓███▀ ░ ▓█   ▓██▒ ▒██▒ ░ ▒██████▒▒
+░ ░▒ ▒  ░░ ▒░▒░▒░ ▒ ▒▒ ▓▒░▓  ░ ░▒ ▒  ░ ▒▒   ▓▒█░ ▒ ░░   ▒ ▒▓▒ ▒ ░
+  ░  ▒     ░ ▒ ▒░ ░ ░▒ ▒░ ▒ ░  ░  ▒     ▒   ▒▒ ░   ░    ░ ░▒  ░ ░
+░        ░ ░ ░ ▒  ░ ░░ ░  ▒ ░░          ░   ▒    ░      ░  ░  ░  
+░ ░          ░ ░  ░  ░    ░  ░ ░            ░  ░              ░  
+░                            ░                                   
+▓█████▄  ▒█████  ▄▄▄█████▓  █████▒██▓ ██▓    ▓█████   ██████ 
+▒██▀ ██▌▒██▒  ██▒▓  ██▒ ▓▒▓██   ▒▓██▒▓██▒    ▓█   ▀ ▒██    ▒ 
+░██   █▌▒██░  ██▒▒ ▓██░ ▒░▒████ ░▒██▒▒██░    ▒███   ░ ▓██▄   
+░▓█▄   ▌▒██   ██░░ ▓██▓ ░ ░▓█▒  ░░██░▒██░    ▒▓█  ▄   ▒   ██▒
+░▒████▓ ░ ████▓▒░  ▒██▒ ░ ░▒█░   ░██░░██████▒░▒████▒▒██████▒▒
+ ▒▒▓  ▒ ░ ▒░▒░▒░   ▒ ░░    ▒ ░   ░▓  ░ ▒░▓  ░░░ ▒░ ░▒ ▒▓▒ ▒ ░
+ ░ ▒  ▒   ░ ▒ ▒░     ░     ░      ▒ ░░ ░ ▒  ░ ░ ░  ░░ ░▒  ░ ░
+ ░ ░  ░ ░ ░ ░ ▒    ░       ░ ░    ▒ ░  ░ ░      ░   ░  ░  ░  
+   ░        ░ ░                   ░      ░  ░   ░  ░      ░  
+ ░  
 
 Here are my dotfiles for a simple and lightweight desktop.
 
-- Window Managers: JWM, Fluxbox, i3, Sway
+- Window Managers: JWM, i3
 - GTK Theme: [Marwaita Dark Debian](https://github.com/darkomarko42/Marwaita-Debian)
 - Icon Theme: [Papirus](https://www.pling.com/p/1166289) (`papirus-icon-theme`)
 - Mouse Theme: [Bibata Modern Ice](https://www.pling.com/p/1197198)
 - Shell: bash
-- Terminals: kitty, foot
-- Editors: nano, micro
+- Terminals: kitty
+- Editor: nano
 - Tools: neofetch
 
 ## License
@@ -19,6 +38,9 @@ This repository include parts of [Dracula Theme](https://github.com/dracula/drac
 - [Aperture](https://wallup.net/wp-content/uploads/2016/05/27/482-Aperture_Laboratories-Portal.jpg)
 - [Linux](https://images.hdqwalls.com/download/tux-penguin-4k-3z-2560x1440.jpg)
 - [Dracula](https://raw.githubusercontent.com/dracula/wallpaper/master/first-collection/void.png)
+
+## JWM
+Add your own shortcuts in `.jwmmenu` and your startup commands in `.jwmstartup`
 
 ## Dependencies
 ### Fonts
@@ -31,3 +53,8 @@ This repository include parts of [Dracula Theme](https://github.com/dracula/drac
 - `xrandr`
 - `pactl`
 - `xss-lock`
+
+## To do
+[ ] Add Sway, foot and micro config
+[ ] Add Fluxbox config
+[ ] Clear `.nanorc` file 
