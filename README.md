@@ -1,5 +1,8 @@
 # cokicat's dotfiles
 
+![.config/i3/config](screenshots/i3.png "i3wm")
+![.jwmrc](screenshots/jwm.png "JWM")
+
 Here are my dotfiles for a simple and lightweight desktop.
 
 - Window Managers: JWM, i3
@@ -38,4 +41,5 @@ Add your own shortcuts in `.jwmmenu` and your startup commands in `.jwmstartup`
 ## To do
 - [ ] Add Sway, foot and micro config
 - [ ] Add Fluxbox config
+- [ ] Clear `.bashrc` file
 - [ ] Clear `.nanorc` file
