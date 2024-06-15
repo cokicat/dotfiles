@@ -139,8 +139,13 @@
 	<ButtonClose>close.png</ButtonClose>
 
 	<!-- Keyboard shortcuts -->
-	<Key mask="4" key="Return">exec: kitty</Key>
+	<Key mask="C, A" key="T">exec: kitty</Key>
 
+	<Key key="XF86AudioRaiseVolume">exec: pactl set-sink-volume @DEFAULT_SINK@ +10%</Key>
+	<Key key="XF86AudioLowerVolume">exec: pactl set-sink-volume @DEFAULT_SINK@ -10%</Key>
+	<Key key="XF86AudioMute">exec: pactl set-sink-mute @DEFAULT_SINK@ toggle</Key>
+	<Key key="XF86AudioMicMute">exec: pactl set-source-mute @DEFAULT_SOURCE@ toggle</Key>
+	
 	<Key key="Up">up</Key>
 	<Key key="Down">down</Key>
 	<Key key="Right">right</Key>

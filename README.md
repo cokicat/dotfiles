@@ -10,8 +10,9 @@ Here are my dotfiles for a simple and lightweight desktop.
 - Icon Theme: [Papirus](https://www.pling.com/p/1166289) (`papirus-icon-theme`)
 - Mouse Theme: [Bibata Modern Ice](https://www.pling.com/p/1197198)
 - Shell: bash
-- Terminals: kitty
+- Terminal: kitty
 - Editor: nano
+- Launcher: dmenu
 - Tools: neofetch
 
 ## License
@@ -39,7 +40,5 @@ Add your own shortcuts in `.jwmmenu` and your startup commands in `.jwmstartup`
 - `xss-lock`
 
 ## To do
-- [ ] Add Sway, foot and micro config
-- [ ] Add Fluxbox config
-- [ ] Clear `.bashrc` file
-- [ ] Clear `.nanorc` file
+- [ ] Add Sway, foot, micro and Fluxbox config
+- [ ] Clear `.bashrc` and `.nanorc` files
