@@ -127,16 +127,13 @@
 
 
 	<!-- Icons configuration -->
-	<IconPath>$HOME/.icons</IconPath>
 	<IconPath>/usr/local/share/icons</IconPath>
 	<IconPath>/usr/local/share/pixmaps</IconPath>
 	<IconPath>/usr/local/lib/X11/icons</IconPath>
 	<IconPath>/usr/local/share/jwm</IconPath>
 
-	<ButtonMin>minimize.png</ButtonMin>
-	<ButtonMax>maximize.png</ButtonMax>
-	<ButtonMaxActive>maximize.png</ButtonMaxActive>
-	<ButtonClose>close.png</ButtonClose>
+
+
 
 	<!-- Keyboard shortcuts -->
 	<Key mask="C, A" key="T">exec: kitty</Key>
