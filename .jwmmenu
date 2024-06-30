@@ -6,5 +6,7 @@ Add your owm programs here e. g. :
 -->
 
 <JWM>
-	<Progam label=""></Program>
+	<RootMenu onroot="3">
+		<Program label=""></Program>
+	</RootMenu>
 </JWM>
