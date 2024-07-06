@@ -11,7 +11,7 @@ Here are my dotfiles for a simple and lightweight desktop.
 - Mouse Theme: [Bibata Modern Ice](https://www.pling.com/p/1197198)
 - Shell: bash
 - Terminal: kitty
-- Editor: nano
+- Editor: nano, vim
 - Launcher: dmenu
 - Tools: neofetch
 
