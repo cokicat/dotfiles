@@ -1,12 +1,10 @@
 <?xml version="1.0"?>
 
 <!--
-Add your owm programs here e. g. :
+Add your own programs here e. g. :
 <Program label="Firefox">firefox</Program>
 -->
 
 <JWM>
-	<RootMenu onroot="3">
-		<Program label=""></Program>
-	</RootMenu>
+	<Program label=""></Program>
 </JWM>

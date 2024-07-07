@@ -13,9 +13,9 @@
 		<Include>$HOME/.jwmmenu</Include>
 		<Separator/>
 		<Exit confirm="true" label="Exit"/>
-		<Restart label="Reload" icon="reload"/>
-		<Program label="Restart">reboot</Program>
-		<Program label="Shutdown">poweroff</Program>
+		<Restart label="Restart"/>
+		<Program label="Reboot">dbus-send --system --print-reply --dest="org.freedesktop.login1" /org/freedesktop/login1 org.freedesktop.login1.Manager.Reboot boolean:true</Program>
+		<Program label="Power Off">dbus-send --system --print-reply --dest="org.freedesktop.login1" /org/freedesktop/login1 org.freedesktop.login1.Manager.PowerOff boolean:true</Program>
 	</RootMenu>
 
 
