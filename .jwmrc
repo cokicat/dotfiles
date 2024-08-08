@@ -136,7 +136,7 @@
 
 
 	<!-- Keyboard shortcuts -->
-	<Key mask="4" key="space">exec: kitty</Key>
+	<Key mask="4" key="Return">exec: kitty</Key>
 
 	<Key key="XF86AudioRaiseVolume">exec: pactl set-sink-volume @DEFAULT_SINK@ +10%</Key>
 	<Key key="XF86AudioLowerVolume">exec: pactl set-sink-volume @DEFAULT_SINK@ -10%</Key>
