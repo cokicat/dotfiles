@@ -40,5 +40,6 @@ Add your own shortcuts in `.jwmmenu` and your startup commands in `.jwmstartup`
 - `xss-lock`
 
 ## To do
+- [x] Clear `.bashrc` file
 - [ ] Add Sway, foot, micro and Fluxbox config
-- [ ] Clear `.bashrc` and `.nanorc` files
+- [ ] Clear `.nanorc` file
