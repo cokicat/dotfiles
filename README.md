@@ -1,6 +1,7 @@
 # cokicat's dotfiles
 
 ![.config/i3/config](screenshots/i3.png "i3wm")
+![.ctwmrc](screenshots/ctwm.png "CTWM")
 ![.jwmrc](screenshots/jwm.png "JWM")
 
 Here are my dotfiles for a simple and lightweight desktop.
