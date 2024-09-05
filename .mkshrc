@@ -9,7 +9,7 @@ set_prompt() {
         IS_HOME="$PWD"
     fi
 
-	 PS1='$( echo -e "╭─\033[1m$HOSTNAME\033[0m: \033[1;32m$USER\033[0m at \033[3;34m$IS_HOME\033[0m\n╰─\033[1m>\033[0m ")'
+	 PS1='$( echo -e "╭─\033[1m$HOSTNAME\033[0m: \033[1;32m$USER\033[0m at \033[3;35m$IS_HOME\033[0m\n╰─\033[1m>\033[0m ")'
 }
 
 # Reolad prompt when you cd

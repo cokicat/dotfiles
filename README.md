@@ -10,7 +10,7 @@ Here are my dotfiles for a simple and lightweight desktop.
 - GTK Themes: [Marwaita Dark Debian](https://github.com/darkomarko42/Marwaita-Debian), [Dracula](https://draculatheme.com/gtk)
 - Icon Theme: [Papirus](https://www.pling.com/p/1166289) (`papirus-icon-theme`)
 - Mouse Theme: [Bibata Modern Ice](https://www.pling.com/p/1197198)
-- Shell: bash
+- Shells: bash, mksh
 - Terminal: kitty
 - Editor: nano, vim
 - Launcher: dmenu
