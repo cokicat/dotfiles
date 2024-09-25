@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+
+<!--
+  This is a very simple config file with many options missing. For a complete
+  set of options with comments, see docs/rc.xml.all
+-->
+
+<labwc_config>
+	<desktops number="4" />
+
+	<windowSwitcher>
+		<outlines>yes</outlines>
+        <fields>
+            <field content="identifier" width="15%" />
+            <field content="type_short" width="5%" />
+            <field content="title" width="80%" />
+        </fields>
+    </windowSwitcher>
+
+	<focus>
+		<followMouse>yes</followMouse>
+	</focus>
+	    
+  <theme>
+    <name></name>
+    <cornerRadius>8</cornerRadius>
+    <font name="Fira Sans" size="11" />
+  </theme>
+
+  <keyboard>
+    <default />
+    <!-- Use a different terminal emulator -->
+    <keybind key="W-Return">
+      <action name="Execute" command="foot" />
+    </keybind>
+
+
+
+
+
+        <keybind key="A-Tab">
+            <action name="NextWindow" />
+        </keybind>
+
+        <keybind key="W-S-Q">
+            <action name="Close" />
+        </keybind>
+
+		<keybind key="W-S-R">
+			<action name="Reconfigure" />
+		</keybind>
+
+        <keybind key="W-F">
+            <action name="ToggleFullscreen" />
+        </keybind> 
+        
+        <!-- virtual desktop binds -->
+
+		<keybind key="C-A-Right">
+            <action name="GoToDesktop" to="right" />
+        </keybind>
+
+        <keybind key="C-A-Left">
+                    <action name="GoToDesktop" to="left" />
+        </keybind>
+        
+        <keybind key="W-Ampersand">
+            <action name="GoToDesktop" to="1" />
+        </keybind>
+
+        <keybind key="W-Eacute">
+            <action name="GoToDesktop" to="2" />
+        </keybind>
+
+        <keybind key="W-Quotedbl">
+            <action name="GoToDesktop" to="3" />
+        </keybind>
+
+        <keybind key="W-Apostrophe">
+            <action name="GoToDesktop" to="4" />
+        </keybind>
+
+
+        <keybind key="W-S-Ampersand">
+            <action name="SendToDesktop" to="1" />
+        </keybind>
+
+        <keybind key="W-S-Eacute">
+            <action name="SendToDesktop" to="2" />
+        </keybind>
+
+        <keybind key="W-S-Quotedbl">
+            <action name="SendToDesktop" to="3" />
+        </keybind>
+
+        <keybind key="W-S-Apostrophe">
+            <action name="SendToDesktop" to="4" />
+	     </keybind>
+
+
+	     
+	</keyboard>
+
+
+    
+
+  <mouse>
+    <default />
+    <context name="Root">
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu" menu="root-menu" />
+      </mousebind>
+    </context>
+  </mouse>
+
+</labwc_config>
