@@ -51,6 +51,7 @@
 
 		<TaskList/>
 		<Spacer width="6"/>
+		<Dock/>
 		<Clock format="%H:%M"></Clock>
 		<TrayButton label="▐">showdesktop</TrayButton>
 	</Tray>
