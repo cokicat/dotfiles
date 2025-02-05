@@ -1,5 +1,5 @@
 # JWM
-![.jwmrc](screenshots.png "JWM")
+![.jwmrc](screenshot.png "JWM")
 
 Configuration for menu and startup commands are located in `.jwmmenu` and `.jwmstartup`.
 
