@@ -1,4 +1,4 @@
-# Dracula Dotfiles
+# Dracula dotfiles
 
 ![i3 screenshot](screenshots/i3.png "i3")
 ![CTWM screenshot](screenshots/ctwm.png "CTWM")
