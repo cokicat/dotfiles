@@ -2,7 +2,7 @@
 <JWM>
 	<!--
 	Based on phono-theme by Christian Bettinger (https://github.com/cbettinger), made by cokicat.
-	This file is distributed under the ISC License. See LICENSE_jwmrc for full terms of the license.
+	This file is distributed under the ISC License. See LICENSE for full terms of the license.
 
 	JWM version: 2.3
 	-->
@@ -149,14 +149,14 @@
 	<Key key="Right">right</Key>
 	<Key key="Left">left</Key>
 	<Key key="J">left</Key>
-    <Key key="K">down</Key>
-    <Key key="I">up</Key>
-    <Key key="L">right</Key>
+	<Key key="K">down</Key>
+	<Key key="I">up</Key>
+	<Key key="L">right</Key>
 	<Key key="Return">select</Key>
 	<Key key="Escape">escape</Key>
 
 	<Key mask="A" key="Tab">nextstacked</Key>
-    <Key mask="A" key="F4">close</Key>
+	<Key mask="A" key="F4">close</Key>
 	<Key mask="C, A" key="Left">ldesktop</Key>
 	<Key mask="C, A" key="Right">rdesktop</Key>
 	<Key mask="C, A" key="Up">udesktop</Key>
