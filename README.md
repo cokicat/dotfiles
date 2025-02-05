@@ -1,6 +1,7 @@
-# JWM
-![.jwmrc](screenshot.png "JWM")
+# JWM dotfiles
+![JWM screenshot](screenshot.png "JWM")
 
+My dotfiles for JWM.  
 Configuration for menu and startup commands are located in `.jwmmenu` and `.jwmstartup`.
 
 ## [Aperture Background](https://wallup.net/wp-content/uploads/2016/05/27/482-Aperture_Laboratories-Portal.jpg)
