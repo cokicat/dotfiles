@@ -1,10 +1,28 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1="╭─\[\e[1m\]\h\[\e[0m\]: \[\e[1;32m\]\u\[\e[0m\] at \[\e[3;35m\]\w\[\e[0m\]\n╰─\[\e[1m\]>\[\e[0m\] "
+PROMPT_COMMAND='
+if [ $? -ne 0 ]; then
+    exit_prompt="[❌$?] ";
+else
+    exit_prompt="";
+fi'
+
+git_prompt() {
+	branch=$(git branch --show-current 2>/dev/null)
+	tag=$(git describe --tags --exact-match 2>/dev/null)
+
+	if [ -n "$branch" ]; then
+		echo " ($branch)"
+	elif [ -n "$tag" ]; then
+		echo " ($tag)"
+	fi
+}
+
+PS1="╭─\[\e[1;31m\]\$exit_prompt\[\e[0m\]\[\e[1m\]\h\[\e[0m\]: \[\e[1;32m\]\u\[\e[0m\] at \[\e[3;35m\]\w\[\e[0m\]\[\e[33m\]\$(git_prompt)\[\e[0m\] \n╰─▶ "
 
 # mkcd function
-mkcd () {
+mkcd() {
     mkdir -p "$1" && cd "$1"
 }
 
