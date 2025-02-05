@@ -3,7 +3,7 @@ general {
         colors = true
         interval = 3
 
-	# Color Theme (Dracula)
+	# Color Scheme (Dracula)
 	color_good = "#50FA7B"
 	color_degraded = "#F1FA8C"
 	color_bad = "#FF5555"
