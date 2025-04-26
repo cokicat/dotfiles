@@ -18,7 +18,7 @@ set_prompt
 
 # mkcd function
 mkcd () {
-    mkdir -p "$1" && cd "$1"
+    mkdir -p "$1" && builtin cd "$1"
 }
 
 # source .mkshrc when no argument given
@@ -31,9 +31,10 @@ source () {
 }
 
 # Some usefull aliases
-alias l="ls -l"
-alias ll="ls -Al"
-alias la="ls -A"
+alias ls="ls --color=auto -F"
+alias l="ls --color=auto -Fl"
+alias ll="ls --color=auto -FAl"
+alias la="ls --color=auto -FA"
 
 alias cls=clear
 alias google="ping google.com"
@@ -43,6 +44,3 @@ alias ....="cd ../../"
 alias ......="cd ../../../"
 alias ........="cd ../../../../"
 
-# Color aliases
-alias ls="ls --color=auto"
-alias grep="grep --color=auto"
