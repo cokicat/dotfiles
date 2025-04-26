@@ -14,9 +14,9 @@ git_prompt() {
 	branch=$(git branch --show-current 2>/dev/null)
 	tag=$(git describe --tags --exact-match 2>/dev/null)
 
-	if [ -n "$branch" ]; then
+	if [[ -n "$branch" ]]; then
 		echo -e " on \e[33m\e[3m$branch\e[0m"
-	elif [ -n "$tag" ]; then
+	elif [[ -n "$tag" ]]; then
 		echo -e " on \e[33m\e[3m$tag\e[0m"
 	fi
 }
@@ -33,17 +33,27 @@ else
 	PS1="╭─[ ${BOLD}\h${RESET} 󰄾 ${GREEN}${BOLD}\u${RESET} at ${MAGENTA}${ITALIC}\w${RESET}\$(git_prompt) ]${RED}${BOLD}\$exit_prompt${RESET}\n╰──> "
 fi
 
-
 # mkcd function
-mkcd() {
-	mkdir -p "$1" && cd "$1"
+mkcd () {
+	mkdir -p "$1" && builtin cd "$1"
+}
+
+# source .bashrc if no argument given
+source () {
+	if [[ -z "$@" ]]; then
+		builtin source "$HOME/.bashrc"
+	else
+		builtin source "$@"
+	fi
 }
 
 # Some usefull aliases
-alias l="ls -l"
-alias ll="ls -Al"
-alias la="ls -A"
+alias ls="ls --color=auto -F"
+alias l="ls --color=auto -Fl"
+alias ll="ls --color=auto -FAl"
+alias la="ls --color=auto -FA"
 
+alias grep="grep --color=auto"
 alias cls=clear
 alias google="ping google.com"
 
@@ -51,8 +61,4 @@ alias ..="cd ../"
 alias ....="cd ../../"
 alias ......="cd ../../../"
 alias ........="cd ../../../../"
-
-# Color aliases
-alias ls="ls --color=auto"
-alias grep="grep --color=auto"
 

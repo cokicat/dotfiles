@@ -23,7 +23,7 @@ mkcd () {
 
 # source .mkshrc when no argument given
 source () {
-	if [ -z "$@" ]; then
+	if [[ -z "$@" ]]; then
 		builtin source "$HOME/.mkshrc"
 	else
 		builtin source "$@"
