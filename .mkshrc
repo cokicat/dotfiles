@@ -2,18 +2,13 @@
 [[ $- != *i* ]] && return
 
 # Custom PS1 with ~ instead of /home/user
-set_prompt() {
-    if [ "$PWD" = "$HOME" ]; then
-        IS_HOME="~"
-    else
-        IS_HOME="$PWD"
-    fi
-
-	 PS1='$( echo -e "╭─\033[1m$HOSTNAME\033[0m: \033[1;32m$USER\033[0m at \033[3;35m$IS_HOME\033[0m\n╰─\033[1m>\033[0m ")'
+set_prompt () {
+	home_path=${PWD//$HOME/'~'}
+	PS1='$( echo -e "╭─{ \033[31m\033[1m$USER\033[0m } at { \033[36m$home_path\033[0m }\n╰─▶ ")'
 }
 
 # Reolad prompt when you cd
-cd() {
+cd () {
     builtin cd "$@"
     set_prompt
 }
@@ -26,13 +21,21 @@ mkcd () {
     mkdir -p "$1" && cd "$1"
 }
 
+# source .mkshrc when no argument given
+source () {
+	if [ -z "$@" ]; then
+		builtin source "$HOME/.mkshrc"
+	else
+		builtin source "$@"
+	fi
+}
+
 # Some usefull aliases
 alias l="ls -l"
 alias ll="ls -Al"
 alias la="ls -A"
 
 alias cls=clear
-alias cat="cat -n"
 alias google="ping google.com"
 
 alias ..="cd ../"
