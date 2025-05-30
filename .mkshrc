@@ -30,6 +30,14 @@ source () {
 	fi
 }
 
+# Highlight today on cal
+cal () {
+	date=$(date '+%d')
+	cal=$(/usr/bin/cal || /bin/cal || /usr/local/bin/cal)
+
+	echo -e "${cal/$date/'\033[1m'$date'\033[0m'}"
+}
+
 # Some usefull aliases
 alias ls="ls --color=auto -F"
 alias l="ls --color=auto -Fl"
