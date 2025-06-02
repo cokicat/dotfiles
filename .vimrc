@@ -17,6 +17,10 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 
+" Clipboard
+set pastetoggle=<F12>
+vnoremap y "+y
+
 " Search
 set ignorecase
 set smartcase
