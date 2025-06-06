@@ -49,7 +49,7 @@ source () {
 
 # Highlight today on cal
 cal () {
-	date=$(date '+%d')
+	date=$(date '+%-d')
 	cal=$(/usr/bin/cal || /bin/cal || /usr/local/bin/cal)
 
 	echo -e "${cal/$date/'\033[1m'$date'\033[0m'}"
