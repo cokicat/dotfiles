@@ -7,9 +7,10 @@
 
 ## 🌈 Rices
 - [Main rice](https://github.com/cokicat/dotfiles)
+- [jellybeans rice (SwayFX, alacritty, waybar, fuzzel)](https://github.com/cokicat/dotfiles/tree/jellybeans)
 - Dracula rice (i3wm, CTWM, kitty) [here]
 - [JWM rice](https://github.com/cokicat/dotfiles/tree/jwm)
-- [Suckless rice (dwm, st, dmenu)](https://github.com/cokicat/dotfiles-suckless)
+- [uckless rice (dwm, st, dmenu)](https://github.com/cokicat/dotfiles-suckless)
 
 ## [🖼️ Background](https://raw.githubusercontent.com/dracula/wallpaper/master/first-collection/void.png)
 
