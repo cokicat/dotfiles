@@ -1,0 +1,43 @@
+# Colorscheme (jellybeans)
+[colors.primary]
+background = "#151515"
+foreground = "#e8e8d3"
+
+[colors.normal]
+black   = "#3b3b3b"
+red     = "#cf6a4c"
+green   = "#99ad6a"
+yellow  = "#d8ad4c"
+blue    = "#597bc5"
+magenta = "#b16286"
+cyan    = "#689d6a"
+white   = "#adadad"
+
+[colors.bright]
+black   = "#3b3b3b"
+red     = "#cf6a4c"
+green   = "#99ad6a"
+yellow  = "#d8ad4c"
+blue    = "#597bc5"
+magenta = "#b16286"
+cyan    = "#689d6a"
+white   = "#adadad"
+
+[window]
+dimensions={columns=125, lines=40}
+padding={x=10, y=10}
+
+[scrolling]
+history=2000
+
+[font]
+size=13
+
+[font.normal]
+family="Agave Nerd Font Propo"
+
+[cursor]
+style={shape="Beam", blinking="Always"}
+
+[keyboard]
+bindings = [{key="T", mods="Control|Shift", action = "CreateNewWindow"}]

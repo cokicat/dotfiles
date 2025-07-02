@@ -1,16 +1,16 @@
 <h1 align="center">cokicat's dotfiles</h1>
+<p align="center"><b>Colorscheme: <a href="https://github.com/nanotech/jellybeans.vim">jellybeans</a></b><p>
 
 ## ✨ Showcase
-![.config/i3/config](screenshots/i3.png "i3wm")
-![.ctwmrc](screenshots/ctwm.png "CTWM")
+![.config/sway/config](screenshots/swayfx1.png "SwayFX")
+![.config/sway/config](screenshots/swayfx2.png "SwayFX")
+![.config/sway/config](screenshots/swayfx3.png "SwayFX")
 
 ## 🌈 Rices
-- Main rice [here]
+- [Main rice](https://github.com/cokicat/dotfiles)
+- jellybeans rice (SwayFX, alacritty, waybar, fuzzel) [here]
 - [Dracula rice (i3wm, CTWM, kitty)](https://github.com/cokicat/dotfiles/tree/dracula)
 - [JWM rice](https://github.com/cokicat/dotfiles/tree/jwm)
-- [Suckless rice (dwm, st, dmenu)](https://github.com/cokicat/dotfiles-suckless)
+- [suckless rice (dwm, st, dmenu)](https://github.com/cokicat/dotfiles-suckless)
 
-## 🖼️ Backgrounds
-- [Aperture](https://wallup.net/wp-content/uploads/2016/05/27/482-Aperture_Laboratories-Portal.jpg)
-- [Linux](https://images.hdqwalls.com/download/tux-penguin-4k-3z-2560x1440.jpg)
-- [Dracula](https://raw.githubusercontent.com/dracula/wallpaper/master/first-collection/void.png)
+## [🖼️ Background](https://wallhaven.cc/w/rq75r7)
