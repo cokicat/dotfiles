@@ -32,10 +32,13 @@ source () {
 
 # Highlight today on cal
 cal () {
-	date=$(date '+%-d')
+	today=$(date '+%-d')
 	cal=$(/usr/bin/cal || /bin/cal || /usr/local/bin/cal)
+	title=$(head -n 1 <<< "$cal")
+	cal=$(tail -n +2 <<< "$cal")
 
-	echo -e "${cal/$date/'\033[1m'$date'\033[0m'}"
+	echo -e "\033[4m$title\033[0m"
+	echo -e "${cal/$today/'\033[1m'$today'\033[0m'}"
 }
 
 # Some usefull aliases
