@@ -1,4 +1,5 @@
 <h1 align="center">cokicat's dotfiles — Dracula</h1>
+<p align="center"><b>Colorscheme: <a href="https://draculatheme.com">Dracula</a></b><p>
 
 ## ✨ Showcase
 ![i3 screenshot](screenshots/i3.png "i3")
