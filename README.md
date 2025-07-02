@@ -1,14 +1,16 @@
 <h1 align="center">cokicat's dotfiles</h1>
 
 ## ✨ Showcase
-![.config/i3/config](screenshots/i3.png "i3wm")
+![.config/sway/config](screenshots/swayfx.png "SwayFX")
 ![.ctwmrc](screenshots/ctwm.png "CTWM")
+![.config/i3/config](screenshots/i3.png "i3wm")
 
 ## 🌈 Rices
 - Main rice [here]
+- [jellybeans rice (SwayFX, alacritty, waybar, fuzzel)](https://github.com/cokicat/dotfiles/tree/jellybeans)
 - [Dracula rice (i3wm, CTWM, kitty)](https://github.com/cokicat/dotfiles/tree/dracula)
 - [JWM rice](https://github.com/cokicat/dotfiles/tree/jwm)
-- [Suckless rice (dwm, st, dmenu)](https://github.com/cokicat/dotfiles-suckless)
+- [suckless rice (dwm, st, dmenu)](https://github.com/cokicat/dotfiles-suckless)
 
 ## 🖼️ Backgrounds
 - [Aperture](https://wallup.net/wp-content/uploads/2016/05/27/482-Aperture_Laboratories-Portal.jpg)
