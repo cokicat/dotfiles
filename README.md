@@ -1,17 +1,16 @@
-# cokicat's dotfiles
+<h1 align="center">cokicat's dotfiles</h1>
 
+## ✨ Showcase
 ![.config/i3/config](screenshots/i3.png "i3wm")
 ![.ctwmrc](screenshots/ctwm.png "CTWM")
 
-This repository contains my personal dotfiles.
-- dotfiles for i3, CTWM, and Kitty are available in the [`dracula`](https://github.com/cokicat/dotfiles/tree/dracula) branch
-- dotfiles for JWM are avaible in the [`jwm`](https://github.com/cokicat/dotfiles/tree/jwm) branch
-- dotfiles for dwm and st are available in the [cokicat/dotfiles-suckless](https://github.com/cokicat/dotfiles-suckless) repo
+## 🌈 Rices
+- Main rice [here]
+- [Dracula rice (i3wm, CTWM, kitty)](https://github.com/cokicat/dotfiles/tree/dracula)
+- [JWM rice](https://github.com/cokicat/dotfiles/tree/jwm)
+- [Suckless rice (dwm, st, dmenu)](https://github.com/cokicat/dotfiles-suckless)
 
-## Installation
-Simply copy the desired files to your home directory.
-
-## Backgrounds
+## 🖼️ Backgrounds
 - [Aperture](https://wallup.net/wp-content/uploads/2016/05/27/482-Aperture_Laboratories-Portal.jpg)
 - [Linux](https://images.hdqwalls.com/download/tux-penguin-4k-3z-2560x1440.jpg)
 - [Dracula](https://raw.githubusercontent.com/dracula/wallpaper/master/first-collection/void.png)
