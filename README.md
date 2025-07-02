@@ -1,4 +1,4 @@
-<h1 align="center">cokicat's dotfiles</h1>
+<h1 align="center">cokicat's dotfiles — jellybeans</h1>
 <p align="center"><b>Colorscheme: <a href="https://github.com/nanotech/jellybeans.vim">jellybeans</a></b><p>
 
 ## ✨ Showcase
