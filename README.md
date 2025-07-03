@@ -13,6 +13,7 @@
 - [suckless rice (dwm, st, dmenu)](https://github.com/cokicat/dotfiles-suckless)
 
 ## 🖼️ Backgrounds
+- [Japanese Village](https://wallhaven.cc/w/rq75r7)
 - [Aperture](https://wallup.net/wp-content/uploads/2016/05/27/482-Aperture_Laboratories-Portal.jpg)
 - [Linux](https://images.hdqwalls.com/download/tux-penguin-4k-3z-2560x1440.jpg)
 - [Dracula](https://raw.githubusercontent.com/dracula/wallpaper/master/first-collection/void.png)
