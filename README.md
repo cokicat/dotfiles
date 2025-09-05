@@ -2,7 +2,7 @@
 
 ## ✨ Showcase
 ![SwayFX](screenshots/jellybeans_swayfx2.png "SwayFX")
-<video src="screenshots/gruvbox_swayfx.mp4" controls></video>
+![SwayFX](screenshots/gruvbox_swayfx.png "SwayFX")
 
 ## 🌈 Rices
 <details>
@@ -18,7 +18,7 @@
 <details>
   <summary>gruvbox rice (SwayFX, alacritty, waybar, fuzzel, swaylock-color)</summary>
 
-  <video src="screenshots/gruvbox_swayfx.mp4" controls></video>
+  ![SwayFX](screenshots/gruvbox_swayfx.png "SwayFX")
 </details>
 
 <details>
