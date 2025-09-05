@@ -1,0 +1,75 @@
+general {
+	output_format = "i3bar"
+        colors = true
+        interval = 3
+
+	# Color Scheme (Dracula)
+	color_good = "#50FA7B"
+	color_degraded = "#F1FA8C"
+	color_bad = "#FF5555"
+}
+
+order += "cpu_usage"
+order += "cpu_temperature 0"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "disk /"
+order += "memory"
+order += "volume master"
+order += "battery all"
+order += "tztime local"
+
+cpu_usage {
+		max_threshold = 75
+		format = " %usage"
+		format_above_degraded_threshold = "  %usage"
+}
+
+cpu_temperature 0 {
+		max_threshold = 70
+        format = " %degrees°C"
+        format_above_threshold = "  %degrees°C"
+        path = "/sys/class/thermal/thermal_zone0/temp"
+}
+
+wireless _first_ {
+        format_up = " %quality at %essid %ip"
+        format_down = "󰪎"
+}
+
+ethernet _first_ {
+        format_up = "󰈀 %ip (%speed)"
+        format_down = "󰪎"
+}
+
+disk "/" {
+        format = " %avail"
+        format_below_threshold = "  %avail"
+}
+
+memory {
+        format = " %used/%total"
+        threshold_degraded = "1G"
+        threshold_critical = "500M"
+        format_degraded = "  %available"
+}
+
+volume master {
+        format = "  %volume"
+        format_muted = ""
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+battery all {
+        status_chr = "󰂄"
+        status_bat = "󰁾"
+        status_unk = "󱉝"
+        status_full = "󰁹"
+        format = "%status %percentage"
+}
+
+tztime local {
+        format = "%H:%M"
+}

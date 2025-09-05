@@ -1,0 +1,30 @@
+#!/bin/sh
+
+current_dir=$(xdg-user-dir PICTURES || echo "$HOME/Pictures")
+
+list_items() {
+	for item in "$current_dir"/*; do
+		basename "$item"
+	done
+}
+
+while true; do
+	choice=$(list_items | fuzzel --dmenu)
+	if [ -z "$choice" ]; then
+		echo "Invalid or canceled option."
+		exit 1
+	fi
+
+	selected_path="$current_dir/$choice"
+
+	if [ -d "$selected_path" ]; then
+		current_dir="$selected_path"
+	elif [ -f "$selected_path" ]; then
+		swaymsg output '*' bg "$selected_path" fill
+	   	ln -sf "$selected_path" ~/wallpaper
+
+		exit 0
+	else
+		echo "Invalid option."
+	fi
+done

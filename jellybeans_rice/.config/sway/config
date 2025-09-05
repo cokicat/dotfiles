@@ -1,0 +1,203 @@
+#    ██████  █     █░ ▄▄▄     ▓██   ██▓  █████▒▒██   ██▒
+#  ▒██    ▒ ▓█░ █ ░█░▒████▄    ▒██  ██▒▓██   ▒ ▒▒ █ █ ▒░
+#  ░ ▓██▄   ▒█░ █ ░█ ▒██  ▀█▄   ▒██ ██░▒████ ░ ░░  █   ░
+#    ▒   ██▒░█░ █ ░█ ░██▄▄▄▄██  ░ ▐██▓░░▓█▒  ░  ░ █ █ ▒
+#  ▒██████▒▒░░██▒██▓  ▓█   ▓██▒ ░ ██▒▓░░▒█░    ▒██▒ ▒██▒
+#  ▒ ▒▓▒ ▒ ░░ ▓░▒ ▒   ▒▒   ▓▒█░  ██▒▒▒  ▒ ░    ▒▒ ░ ░▓ ░
+#  ░ ░▒  ░ ░  ▒ ░ ░    ▒   ▒▒ ░▓██ ░▒░  ░      ░░   ░▒ ░
+#  ░  ░  ░    ░   ░    ░   ▒   ▒ ▒ ░░   ░ ░     ░    ░
+#        ░      ░          ░  ░░ ░              ░    ░
+#                              ░ ░
+
+# Variables
+## Default modifier
+set $mod Mod4
+
+## Default terminal emulator
+set $term alacritty
+
+## Menu command
+set $menu fuzzel
+
+# Startup commands
+exec --no-startup-id waybar
+exec --no-startup-id autotiling
+exec --no-startup-id nm-applet
+
+
+# Appearance
+## Color Scheme (jellybeans)
+set $bg #151515
+set $bg2 #1f1f1f
+set $fg #e8e8d3
+set $fg2 #888888
+set $red #cf6a4c
+
+## class				border	bground	text	indicator	child_border
+client.focused			$fg2	$fg2	$bg2	$fg2		$fg2
+client.focused_inactive	$bg2	$bg2	$fg2	$bg2		$bg2
+client.unfocused		$bg2	$bg2	$fg2	$bg2		$bg2
+client.urgent			$red	$red	$bg2	$red		$red
+client.placeholder		#000000	#000000	$fg		#000000		#000000
+client.background		#000000
+
+font pango:AgaveNerdFontPropo 12 
+
+## Background
+output "*" bg ~/wallpaper fill
+
+gaps inner 15
+gaps outer 15
+
+## Effects
+corner_radius 5
+#for_window [app_id="Alacritty"] blur enable
+
+## Shadows
+shadows enable
+shadows_on_csd disable
+shadow_blur_radius 25
+
+
+## No window titles
+for_window [class="^.*"] border pixel 2
+
+## Cursor
+seat seat0 xcursor_theme Bibata-Modern-Classic 22
+
+
+# Window rules
+for_window [class="Gimp-2.10"] floating enable
+for_window [app_id="org.pulseaudio.pavucontrol"] floating enable
+for_window [app_id="wdisplays"] floating enable
+
+
+# Input configuration
+## Enable tap on touchpad
+input type:touchpad {
+	tap enabled
+	natural_scroll enabled
+}
+
+## Keyboard layout
+input * {
+	xkb_layout fr
+}
+
+
+# Idle configuration
+#exec swayidle -w \
+#	timeout 300 swaylock \
+#	timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+#	before-sleep swaylock
+
+
+# Key bindings
+## Start a terminal
+bindsym $mod+Return exec $term
+
+## Start menu
+bindsym $mod+d exec $menu
+bindsym Control+space exec $menu
+
+## Change wallpaper
+bindsym $mod+b exec ~/.config/sway/scripts/wallpaper
+
+## Kill focused window
+bindsym $mod+Shift+q kill
+
+## Lock the screen
+#bindsym $mod+l exec swaylock
+
+## Screenshot
+#bindsym Print exec ~/.config/sway/scripts/screenshot
+
+## Special function keys
+bindsym XF86AudioLowerVolume exec "wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-"
+bindsym XF86AudioRaiseVolume exec "wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+"
+bindsym XF86AudioMute exec "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+bindsym XF86AudioMicMute exec "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+#bindsym XF86MonBrightnessUp exec "brightnessctl set 10%+"
+#bindsym XF86MonBrightnessDown exec "brightnessctl set 10%-"
+
+## Drag windows with $mod + left click, resize with $mod + right click
+floating_modifier $mod normal
+
+## Exit sway
+bindsym $mod+Shift+e exit
+
+# Reload sway
+bindsym $mod+Shift+r reload
+
+## Move focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+## Move focused container
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+## Switch to workspace (french keyboard)
+bindsym Control+Mod1+Right workspace next
+bindsym Control+Mod1+Left workspace prev
+bindsym $mod+ampersand workspace number 1
+bindsym $mod+eacute workspace number 2
+bindsym $mod+quotedbl workspace number 3
+bindsym $mod+apostrophe workspace number 4
+bindsym $mod+parenleft workspace number 5
+bindsym $mod+minus workspace number 6
+bindsym $mod+egrave workspace number 7
+bindsym $mod+underscore workspace number 8
+bindsym $mod+ccedilla workspace number 9
+bindsym $mod+agrave workspace number 10
+
+## Move focused container to workspace (french keyboard)
+bindsym $mod+Shift+ampersand move container to workspace number 1
+bindsym $mod+Shift+eacute move container to workspace number 2
+bindsym $mod+Shift+quotedbl move container to workspace number 3
+bindsym $mod+Shift+apostrophe move container to workspace number 4
+bindsym $mod+Shift+parenleft move container to workspace number 5
+bindsym $mod+Shift+minus move container to workspace number 6
+bindsym $mod+Shift+egrave move container to workspace number 7
+bindsym $mod+Shift+underscore move container to workspace number 8
+bindsym $mod+Shift+ccedilla move container to workspace number 9
+bindsym $mod+Shift+agrave move container to workspace number 10
+
+## Resize container
+mode "resize" {
+	bindsym Left resize shrink width 10px
+	bindsym Down resize grow height 10px
+	bindsym Up resize shrink height 10px
+	bindsym Right resize grow width 10px
+
+	# Return to default mode
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+bindsym $mod+h splith
+bindsym $mod+v splitv
+
+## Switch layout
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+## Toggle fullscreen
+bindsym $mod+f fullscreen
+
+## Toggle floating
+bindsym $mod+Shift+space floating toggle
+
+## Move focus between tiling and floating containers
+bindsym $mod+Tab focus mode_toggle
+
+## Move focus to the parent container
+bindsym $mod+a focus parent
+
+include /etc/sway/config.d/*

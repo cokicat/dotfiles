@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<JWM>
+	<!--
+	Based on phono-theme by Christian Bettinger (https://github.com/cbettinger), made by cokicat.
+	This file is distributed under the ISC License. See LICENSE for full terms of the license.
+
+	JWM version: 2.3
+	-->
+	<!-- root menu -->
+	<RootMenu onroot="3">
+		<Program label="kitty">kitty</Program>
+		<!-- Include menu -->
+		<Include>$HOME/.jwmmenu</Include>
+		<Separator/>
+		<Exit confirm="true" label="Exit"/>
+		<Restart label="Restart"/>
+		<Program label="Reboot">dbus-send --system --print-reply --dest="org.freedesktop.login1" /org/freedesktop/login1 org.freedesktop.login1.Manager.Reboot boolean:true</Program>
+		<Program label="Power Off">dbus-send --system --print-reply --dest="org.freedesktop.login1" /org/freedesktop/login1 org.freedesktop.login1.Manager.PowerOff boolean:true</Program>
+	</RootMenu>
+
+
+
+
+	<!-- Main configuration -->
+	<Desktops width="4" height="1">
+		<Background type="solid">#000000</Background>
+	</Desktops>
+
+	<FocusModel>sloppy</FocusModel>
+	<SnapMode distance="10">border</SnapMode>
+	<MoveMode coordinates="off">outline</MoveMode>
+	<ResizeMode>outline</ResizeMode>
+	
+	<!-- Include startup commands -->
+	<Include>$HOME/.jwmstartup</Include>
+	<Group>
+		<Option>tiled</Option>
+		<Option>aerosnap</Option>
+	</Group>
+
+
+
+
+	<!-- Tray configuration -->
+	<Tray x="0" y="-1" height="30" autohide="off">
+		<TrayButton icon="/usr/share/jwm/jwm-orange.svg">root:3</TrayButton>
+		<Spacer width="6"/>
+
+		<Pager labeled="true"/>
+		<Spacer width="6"/>
+
+		<TaskList/>
+		<Spacer width="6"/>
+		<Dock/>
+		<Clock format="%H:%M"></Clock>
+		<TrayButton label="▐">showdesktop</TrayButton>
+	</Tray>
+
+
+
+
+	<!-- Styles configuration-->
+	<MenuStyle>
+		<Font>Ubuntu-11:bold</Font>
+		<Outline>#1B1A18</Outline>
+		<Background>#1B1A18</Background>
+		<Foreground>#D3D8D2</Foreground>
+		<Active>
+			<Background>#1B1A18</Background>
+			<Foreground>#F2B826</Foreground>
+		</Active>
+		<Opacity>1.0</Opacity>
+	</MenuStyle>
+
+	<TrayStyle group="false" list="all">
+		<Font>Ubuntu-11</Font>
+		<Outline>#1B1A18</Outline>
+		<Background>#1B1A18</Background>
+		<Foreground>#D3D8D2</Foreground>
+		<Active>
+			<Background>#1B1A18</Background>
+			<Foreground>#F2B826</Foreground>
+		</Active>
+		<Opacity>1.0</Opacity>
+	</TrayStyle>
+
+	<PagerStyle>
+		<Font>Ubuntu-11:bold</Font>
+		<Outline>#1B1A18</Outline>
+		<Background>#2A2A2A</Background>
+		<Foreground>#D3D8D2</Foreground>
+		<Text>#F2B826</Text>
+		<Active>
+			<Background>#5B4A3A</Background>
+			<Foreground>#F2B826</Foreground>
+		</Active>
+	</PagerStyle>
+	
+	<ClockStyle>
+		<Font>Ubuntu-11</Font>
+	</ClockStyle>
+
+	<WindowStyle>
+		<Font>Ubuntu-11:bold</Font>
+		<Width>2</Width>
+		<Height>24</Height>
+		<Corner>5</Corner>
+		<Outline>#1B1A18</Outline>
+		<Background>#1B1A18</Background>
+		<Foreground>#D3D8D2</Foreground>
+		<Opacity>1.0</Opacity>
+		<Active>
+			<Outline>#1B1A18</Outline>
+			<Background>#1B1A18</Background>
+			<Foreground>#F2B826</Foreground>
+			<Opacity>1.0</Opacity>
+		</Active>
+	</WindowStyle>
+
+	<PopupStyle enabled="false">
+		<Font>Ubuntu-11</Font>
+		<Outline>#1B1A18</Outline>
+		<Background>#1B1A18</Background>
+		<Foreground>#D3D8D2</Foreground>
+	</PopupStyle>
+
+
+
+
+	<!-- Icons configuration -->
+	<IconPath>/usr/local/share/icons</IconPath>
+	<IconPath>/usr/local/share/pixmaps</IconPath>
+	<IconPath>/usr/local/lib/X11/icons</IconPath>
+	<IconPath>/usr/local/share/jwm</IconPath>
+
+
+
+
+	<!-- Keyboard shortcuts -->
+	<Key mask="4" key="Return">exec: kitty</Key>
+
+	<Key key="XF86AudioRaiseVolume">exec: pactl set-sink-volume @DEFAULT_SINK@ +10%</Key>
+	<Key key="XF86AudioLowerVolume">exec: pactl set-sink-volume @DEFAULT_SINK@ -10%</Key>
+	<Key key="XF86AudioMute">exec: pactl set-sink-mute @DEFAULT_SINK@ toggle</Key>
+	<Key key="XF86AudioMicMute">exec: pactl set-source-mute @DEFAULT_SOURCE@ toggle</Key>
+	
+	<Key key="Up">up</Key>
+	<Key key="Down">down</Key>
+	<Key key="Right">right</Key>
+	<Key key="Left">left</Key>
+	<Key key="J">left</Key>
+	<Key key="K">down</Key>
+	<Key key="I">up</Key>
+	<Key key="L">right</Key>
+	<Key key="Return">select</Key>
+	<Key key="Escape">escape</Key>
+
+	<Key mask="A" key="Tab">nextstacked</Key>
+	<Key mask="A" key="F4">close</Key>
+	<Key mask="C, A" key="Left">ldesktop</Key>
+	<Key mask="C, A" key="Right">rdesktop</Key>
+	<Key mask="C, A" key="Up">udesktop</Key>
+	<Key mask="C, A" key="Down">ddesktop</Key>
+
+	<Key mask="4" key="Left">maxleft</Key>
+	<Key mask="4" key="Right">maxright</Key>
+	<Key mask="4" key="Up">maximize</Key>
+	<Key mask="4" key="Down">shade</Key>
+
+	<Key mask="C, S" key="E">exit</Key>
+</JWM>
