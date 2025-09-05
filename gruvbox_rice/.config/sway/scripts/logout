@@ -1,0 +1,17 @@
+#!/bin/bash
+
+choice=$(echo -e "󰍃 Logout\n󰐥 PowerOff\n󰑓 Reboot" | fuzzel -d --minimal-lines -p "󰍃 logout: ") 
+case $choice in
+    "󰍃 Logout")
+        swaymsg exit
+        ;;
+    "󰐥 PowerOff")
+        systemctl poweroff
+        ;;
+    "󰑓 Reboot")
+        systemctl reboot
+        ;;
+    *)
+        echo "Unvalid option"
+        ;;
+esac

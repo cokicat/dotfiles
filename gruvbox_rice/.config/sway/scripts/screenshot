@@ -1,0 +1,42 @@
+#!/bin/bash
+
+if pgrep wf-recorder > /dev/null; then
+	choice=$(echo -e "󰑊 Stop recording\n󰹑 Capture the entire screen\n󰩭 Select region" | fuzzel -d --minimal-lines -p "󰹑 screenshot: ")
+
+	case $choice in
+		"󰑊 Stop recording")
+			pkill wf-recorder
+			;;
+		"󰹑 Capture the entire screen")
+			current_date=$(date "+%Y-%m-%d_%H-%M-%S")
+			grim ~/screenshot-"$current_date".png && wl-copy < ~/screenshot-$current_date.png
+			;;
+		"󰩭 Select region")
+			current_date=$(date "+%Y-%m-%d_%H-%M-%S")
+			grim -g "$(slurp)" ~/screenshot-"$current_date".png && wl-copy < ~/screenshot-$current_date.png
+			;;
+		*)
+			echo "Unvalid option"
+			;;
+	esac
+else
+	choice=$(echo -e "󰹑 Capture the entire screen\n󰩭 Select region\n󰑊 Record" | fuzzel -d --minimal-lines -p "󰹑 screenshot: ")
+
+	case $choice in
+		"󰹑 Capture the entire screen")
+			current_date=$(date "+%Y-%m-%d_%H-%M-%S")
+			grim ~/screenshot-"$current_date".png && wl-copy < ~/screenshot-$current_date.png
+			;;
+		"󰩭 Select region")
+			current_date=$(date "+%Y-%m-%d_%H-%M-%S")
+			grim -g "$(slurp)" ~/screenshot-"$current_date".png && wl-copy < ~/screenshot-$current_date.png
+			;;
+		"󰑊 Record")
+			current_date=$(date "+%Y-%m-%d_%H-%M-%S")
+			wf-recorder -f ~/record-"$current_date".mp4 &
+			;;
+		*)
+			echo "Unvalid option"
+			;;
+	 esac
+fi

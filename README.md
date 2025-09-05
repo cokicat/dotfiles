@@ -2,7 +2,7 @@
 
 ## ✨ Showcase
 ![SwayFX](screenshots/jellybeans_swayfx2.png "SwayFX")
-![CTWM](screenshots/dracula_ctwm.png "CTWM")
+<video src="screenshots/gruvbox_swayfx.mp4" controls></video>
 
 ## 🌈 Rices
 <details>
@@ -13,6 +13,12 @@
   ![SwayFX](screenshots/jellybeans_swayfx3.png "SwayFX")
 
   ## [🖼️ Background](https://wallhaven.cc/w/rq75r7)
+</details>
+
+<details>
+  <summary>gruvbox rice (SwayFX, alacritty, waybar, fuzzel, swaylock-color)</summary>
+
+  <video src="screenshots/gruvbox_swayfx.mp4" controls></video>
 </details>
 
 <details>

@@ -1,0 +1,87 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 43, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 10, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "sway/workspaces",
+        "cpu",
+        "memory"
+    ],
+
+
+    "modules-center": [
+        "clock"
+    ],
+
+	"modules-right": [
+		"network",
+		"battery",
+		"backlight",
+		"wireplumber",
+		"tray"
+	],
+
+    "clock": {
+        "tooltip-format": "<big>{:%A %d}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d/%m/%Y}"
+    },
+
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr} ",
+        "format-linked": "{ifname} (No IP) 󰕑",
+        "format-disconnected": "Disconnected 󰪎",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "on-click": "alacritty -e nmtui"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "interval": 2,
+        "states": {
+             "warning": 80,
+             "critical": 90
+        }
+    },
+    "memory": {
+    	"interval": 2,
+        "states": {
+             "warning": 60,
+             "critical": 75
+    },
+        "format": "{used}/{total}GB ",
+        "tooltip-format": "{percentage}% used",
+        "on-click": "alacritty -e htop"
+    },
+    "battery": {
+        "states": {
+            "warning": 15,
+            "critical": 5
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "backlight": {
+        "scroll-step": 2,
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "tooltip": false
+    },
+    "wireplumber": {
+        "scroll-step": 2,
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": ["", "", ""],
+        "on-click": "pavucontrol"
+    },
+    "tray": {
+        "icon-size": 24,
+        "spacing": 10
+    }
+}

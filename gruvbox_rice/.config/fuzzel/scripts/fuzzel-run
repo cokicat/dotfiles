@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+declare -A seen
+
+list_files_in_path() {
+	for dir in ${PATH//:/ }; do
+		for file in "$dir"/*; do
+			if [ -x "$file" ]; then
+				basename_file=${file##*/}
+				if [[ -z "${seen[$basename_file]}" ]]; then
+					seen["$basename_file"]=1
+					echo "$basename_file"
+				fi
+			fi
+		done
+	done
+}
+
+$(list_files_in_path | fuzzel --dmenu)
+

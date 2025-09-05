@@ -1,0 +1,46 @@
+# Indicator
+indicator
+indicator-radius=130
+indicator-thickness=10
+font=C059
+
+# Effets
+effect-blur=7x5
+effect-vignette=0.5:0.5
+#grace=2
+#fade-in=0.2
+
+# Clock
+clock
+timestr=%H:%M
+datestr=%A %d %B
+
+# Background
+screenshots
+
+# Default colors
+text-color=fbf1c7
+ring-color=689d6a
+line-color=00000000
+inside-color=28282888
+key-hl-color=8ec07c
+bs-hl-color=fb4934
+separator-color=00000000
+
+# Wrong colors
+ring-wrong-color=cc241d
+inside-wrong-color=28282888
+text-wrong-color=fbf1c7
+line-wrong-color=00000000
+
+# Clear colors
+ring-clear-color=d79921
+inside-clear-color=28282888
+text-clear-color=fbf1c7
+line-clear-color=00000000
+
+# Verifying colors
+ring-ver-color=b16286
+inside-ver-color=28282888
+text-ver-color=fbf1c7
+line-ver-color=00000000
