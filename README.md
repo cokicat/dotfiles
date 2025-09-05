@@ -27,7 +27,7 @@
   ![i3wm](screenshots/dracula_i3wm.png "i3wm")
   ![CTWM](screenshots/dracula_ctwm.png "CTWM")
 
-  ## License
+  ## 📄 License
   This repository includes parts of [Dracula Theme](https://github.com/dracula/dracula-theme.git) by [Dracula Team](https://github.com/dracula) which is distributed under MIT License. See `dracula_rice/LICENSE` for the full terms of the license.
 </details>
 
@@ -36,7 +36,7 @@
 
   ![JWM](screenshots/jwm.png "JWM")
 
-  ## License
+  ## 📄 License
   `.jwmrc` file is based on [phono-theme](https://github.com/cbettinger/phono-theme) by [cbettinger](https://github.com/cbettinger/) which is distributed under the ISC License. See `jwm_rice/LICENSE_jwmrc` for the full terms of the license.
 
   ## [🖼️ Background](https://wallup.net/wp-content/uploads/2016/05/27/482-Aperture_Laboratories-Portal.jpg)
