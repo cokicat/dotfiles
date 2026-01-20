@@ -1,0 +1,67 @@
+! Menu
+menu.items.justify: left
+menu.items.padding.x: 10
+menu.items.padding.y: 6
+menu.items.bg.color: #000000
+menu.items.text.color: #555753
+
+menu.separator.width: 1
+menu.separator.padding.width: 18
+menu.separator.padding.height: 7
+menu.separator.color: #555753
+
+menu.border.width: 1
+menu.border.color: #101010
+
+menu.title.text.justify: center
+menu.title.bg.color: #000000
+menu.title.text.color: #EEEEEC
+
+! Selected menu item
+menu.items.active.bg.color: #000000
+menu.items.active.text.color: #EEEEEC
+
+
+!! Titlebar
+window.titlebar.padding.width: 8
+window.titlebar.padding.height: 6
+window.active.title.bg.color: #000000
+window.inactive.title.bg.color: #000000
+window.active.indicator.toggled-keybind.color: #EF2929
+
+window.label.text.justify: center
+window.active.label.text.color: #EEEEEC
+window.inactive.label.text.color: #555753
+
+
+! Window buttons
+window.button.width: 14
+window.button.height: 14
+window.button.spacing: 8
+window.active.button.unpressed.image.color: #EEEEEC
+window.inactive.button.unpressed.image.color: #555753
+!window.button.hover.bg.corner-radius: 90
+
+
+! Borders
+border.width: 2
+padding.height: 10
+window.active.border.color: #729FCF
+window.inactive.border.color: #101010
+
+
+! Snapping
+snapping.overlay.region.bg.color: #55575380
+snapping.overlay.edge.bg.color: #55575380
+
+
+! On-screen displays
+osd.border.width: 1
+osd.border.color: #101010
+osd.label.text.color: #555753
+osd.bg.color: #000000
+
+osd.window-switcher.preview.border.width: 2
+osd.window-switcher.preview.border.color: #555753
+
+osd.workspace-switcher.boxes.width: 30

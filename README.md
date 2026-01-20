@@ -1,8 +1,8 @@
 <h1 align="center">cokicat's dotfiles</h1>
 
 ## ✨ Showcase
-![SwayFX](screenshots/jellybeans_swayfx2.png "SwayFX")
 ![LabWC](screenshots/tango_labwc.png "LabWC")
+![SwayFX](screenshots/jellybeans_swayfx2.png "SwayFX")
 ![SwayFX](screenshots/gruvbox_swayfx.png "SwayFX")
 
 ## 🌈 Rices
