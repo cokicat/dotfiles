@@ -1,0 +1,10 @@
+pipewire 2>&1 &
+pipewire-pulse 2>&1 &
+wireplumber 2>&1 &
+
+yambar 2>&1 &
+swaybg -i /home/cokicat/Pictures/ghibli.jpg 2>&1 &
+
+gsettings set org.gnome.desktop.interface icon-theme Papirus 2>&1 &
+gsettings set org.gnome.desktop.interface cursor-theme Adwaita 2>&1 &
+gsettings set org.gnome.desktop.interface cursor-size 24 2>&1 &

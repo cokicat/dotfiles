@@ -1,0 +1,54 @@
+[colors.cursor]
+text = "#FFFFFF"
+cursor = "#FFFFFF"
+
+[colors.primary]
+foreground = "#D3D7CF"
+background = "#000000"
+
+[colors.normal]
+black   = "#000000"
+red     = "#CC0000"
+green   = "#4E9A06"
+yellow  = "#C4A000"
+blue    = "#3465A4"
+magenta = "#75507B"
+cyan    = "#06989A"
+white   = "#D3D7CF"
+
+[colors.bright]
+black   = "#555753"
+red     = "#EF2929"
+green   = "#8AE234"
+yellow  = "#FCE94F"
+blue    = "#729FCF"
+magenta = "#AD7FA8"
+cyan    = "#34E2E2"
+white   = "#EEEEEC"
+
+[colors.selection]
+text = "#000000"
+background = "#FFFFFF"
+
+[window]
+padding = {x=15, y=15}
+
+[window.dimensions]
+columns = 68
+lines = 21
+
+[scrolling]
+history = 4096
+
+[font]
+size = 11
+
+[font.normal]
+family = "Go Mono Nerd Font"
+
+[cursor]
+style = {shape = "Beam", blinking = "Always"}
+
+[keyboard]
+bindings = [{key = "T", mods = "Control|Shift", action = "CreateNewWindow"}]
+

@@ -1,0 +1,153 @@
+bar:
+  height: 32
+  location: bottom
+  spacing: 10
+  margin: 10
+  right-margin: 15
+  left-margin: 15
+
+  font: Go Mono Nerd Font Propo:pixelsize=14
+
+  foreground: eeeeecff
+  background: 000000ff
+
+  left:    
+    - cpu:
+        poll-interval: 1000
+        content:
+          map:
+            conditions:
+              id == 0:
+                - ramp:
+                    tag: cpu
+                    items:
+                      - string: {text: "󰍛 {cpu}%", foreground: 8ae234ff}
+                      - string: {text: "󰍛 {cpu}%", foreground: fce94fff}
+                      - string: {text: "󰍛 {cpu}%", foreground: ef2929ff}
+
+    - mem:
+        poll-interval: 1000
+        content:
+          - ramp:
+              tag: percent_used
+              items:
+                - string: {text: "󰘚 {percent_used}%", foreground: 8ae234ff}
+                - string: {text: "󰘚 {percent_used}%", foreground: fce94fff}
+                - string: {text: "󰘚 {percent_used}%", foreground: ef2929ff}
+
+  center:
+    - foreign-toplevel:
+        content:
+          map:
+            conditions:
+              ~activated: {empty: {}}
+              activated:
+                - string: {text: "{app-id}"}
+                - string: {text: ": {title}", foreground: 555753ff}
+
+  right:
+    - network:
+        content:
+          map:
+            default: {empty: {}}
+            conditions:
+              name == wlan0:
+                map:
+                  default: {empty: {}}
+                  conditions:
+                    state == up:
+                      string: {text: "󰖩 {ssid}", on-click: "alacritty -e nmtui"}
+              name == eth0:
+                map:
+                  default: {empty: {}}
+                  conditions:
+                    state == up:
+                      string: {text: "󰈀 {ipv4}", on-click: "alacritty -e nmtui"}
+
+    - pipewire:
+        content:
+          list:
+            items:
+              - map:
+                  conditions:
+                    type == "sink":
+                      map:
+                        conditions:
+                          ~muted:
+                            - ramp:
+                                tag: cubic_volume
+                                items:
+                                  - string: {text: "󰕿 {cubic_volume}%"}
+                                  - string: {text: "󰖀 {cubic_volume}%"}
+                                  - string: {text: "󰕾 {cubic_volume}%"}
+                          muted:
+                            - string: {text: 󰝟, foreground: ef2929ff}
+      
+    - backlight:
+        name: intel_backlight
+        content:
+          - ramp:
+              tag: percent
+              items:
+                - string: {text: "󰃚 {percent}%"}
+                - string: {text: "󰃛 {percent}%"}
+                - string: {text: "󰃜 {percent}%"}
+                - string: {text: "󰃝 {percent}%"}
+                - string: {text: "󰃞 {percent}%"}
+                - string: {text: "󰃟 {percent}%"}
+                - string: {text: "󰃠 {percent}%"}
+
+    - clock:
+        content:
+          - string: {text: "{time}"}
+    
+    - battery:
+        name: BAT1
+        poll-interval: 3000
+        anchors:
+          discharging: &discharging
+            list:
+              items:
+                - ramp:
+                    tag: capacity
+                    items:
+                      - string: {text: 󰂎, foreground: ef2929ff}
+                      - string: {text: 󰁺, foreground: ef2929ff}
+                      - string: {text: 󰁻, foreground: fce94fff}
+                      - string: {text: 󰁼, foreground: fce94fff}
+                      - string: {text: 󰁽}
+                      - string: {text: 󰁾}
+                      - string: {text: 󰁿}
+                      - string: {text: 󰂀}
+                      - string: {text: 󰂁}
+                      - string: {text: 󰂂}
+                      - string: {text: 󰁹}
+                - string: {text: " {capacity}%"}
+        content:
+          map:
+            conditions:
+              state == "discharging":
+                <<: *discharging
+              state == "not charging":
+                <<: *discharging
+              state == "charging":
+                - ramp:
+                    tag: capacity
+                    items:
+                      - string: {text: "󰂎 {capacity}%", foreground: 8ae234ff}
+                      - string: {text: "󰁺 {capacity}%", foreground: 8ae234ff}
+                      - string: {text: "󰁻 {capacity}%", foreground: 8ae234ff}
+                      - string: {text: "󰁼 {capacity}%", foreground: 8ae234ff}
+                      - string: {text: "󰁽 {capacity}%", foreground: 8ae234ff}
+                      - string: {text: "󰁾 {capacity}%", foreground: 8ae234ff}
+                      - string: {text: "󰁿 {capacity}%", foreground: 8ae234ff}
+                      - string: {text: "󰂀 {capacity}%", foreground: 8ae234ff}
+                      - string: {text: "󰂁 {capacity}%", foreground: 8ae234ff}
+                      - string: {text: "󰂂 {capacity}%", foreground: 8ae234ff}
+                      - string: {text: "󰁹 {capacity}%", foreground: 8ae234ff}
+              state == "unkown":
+                - string: {text: 󰂑, foreground: fce94fff}
+                - string: {text: " Unknown"}
+              state == "full":
+                - string: {text: 󰁹, foreground: 8ae234ff}
+                - string: {text: " Full"}

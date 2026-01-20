@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+
+<labwc_config>
+	<desktops number="4" />
+
+	<placement>
+		<policy>automatic</policy>
+	</placement>
+
+	<focus>
+		<followMouse>yes</followMouse>
+		<followMouseRequiresMovement>yes</followMouseRequiresMovement>
+	</focus>
+
+	<theme>
+		<name>cokicat</name>
+		<font name="Go Mono Nerd Font Propo" size="11" />
+		<titlebar>
+			<layout>close,max,iconify:</layout>
+		</titlebar>
+		<icon>Papirus</icon>
+		<cornerRadius>0</cornerRadius>
+		<dropShadows>yes</dropShadows>
+	</theme>
+
+	<keyboard>
+		<keybind key="W-Return">
+			<action name="Execute" command="alacritty" />
+		</keybind>
+		<keybind key="C-space">
+			<action name="Execute" command="/home/cokicat/.config/labwc/scripts/bemenu-config.sh" />
+		</keybind>
+		<keybind key="W-d">
+			<action name="Execute" command="/home/cokicat/.config/labwc/scripts/bemenu-config-dmenu.sh" />
+		</keybind>
+		<keybind key="XF86AudioRaiseVolume">
+			<action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+" />
+		</keybind>
+		<keybind key="XF86AudioLowerVolume">
+			<action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-" />
+		</keybind>
+		<keybind key="XF86MonBrightnessUp">
+			<action name="Execute" command="brightnessctl set 5%+" />
+		</keybind>
+		<keybind key="XF86MonBrightnessDown">
+			<action name="Execute" command="brightnessctl set 5%-" />
+		</keybind>
+
+		<keybind key="A-Tab">
+			<action name="NextWindow" />
+		</keybind>
+		<keybind key="A-S-Tab">
+			<action name="PreviousWindow" />
+		</keybind>
+
+		<keybind key="C-A-Left">
+			<action name="GoToDesktop" to="left" />
+		</keybind>
+		<keybind key="C-A-Right">
+			<action name="GoToDesktop" to="right" />
+		</keybind>
+		<keybind key="W-Ampersand">
+			<action name="GoToDesktop" to="1" />
+		</keybind>
+		<keybind key="W-Eacute">
+			<action name="GoToDesktop" to="2" />
+		</keybind>
+		<keybind key="W-Quotedbl">
+			<action name="GoToDesktop" to="3" />
+		</keybind>
+		<keybind key="W-Apostrophe">
+			<action name="GoToDesktop" to="4" />
+		</keybind>
+		<keybind key="W-S-Ampersand">
+			<action name="SendToDesktop" to="1" follow="no" />
+		</keybind>
+		<keybind key="W-S-Eacute">
+			<action name="SendToDesktop" to="2" follow="no" />
+		</keybind>
+		<keybind key="W-S-Quotedbl">
+			<action name="SendToDesktop" to="3" follow="no" />
+		</keybind>
+		<keybind key="W-S-Apostrophe">
+			<action name="SendToDesktop" to="4" follow="no" />
+		</keybind>
+
+
+		<keybind key="S-W-Up">
+			<action name="SnapToEdge" direction="up" />
+		</keybind>
+		<keybind key="W-Up">
+			<action name="ToggleMaximize" />
+		</keybind>
+		<keybind key="W-Right">
+			<action name="SnapToEdge" direction="right" />
+		</keybind>
+		<keybind key="W-Left">
+			<action name="SnapToEdge" direction="left" />
+		</keybind>
+		<keybind key="W-Down">
+			<action name="SnapToEdge" direction="down" />
+		</keybind>
+		<keybind key="W-f">
+			<action name="ToggleFullscreen" />
+		</keybind>
+
+		<keybind key="A-F4">
+			<action name="Close" />
+		</keybind>
+		<keybind key="W-q">
+			<action name="Close" />
+		</keybind>
+		<keybind key="W-S-q">
+			<action name="Kill" />
+		</keybind>
+
+		<keybind key="W-k">
+			<action name="ToggleKeybinds" />
+		</keybind>
+
+		<keybind key="W-S-r">
+			<action name="Reconfigure" />
+		</keybind>
+		<keybind key="W-S-e">
+			<action name="Exit" />
+		</keybind>
+	</keyboard>
+
+	<mouse>
+		<default />
+		<context name="Root">
+			<!-- Remove default keybindings -->
+			<mousebind button="Left" action="Press" />
+			<mousebind direction="Up" action="Scroll" />
+			<mousebind direction="Down" action="Scroll" />
+
+			<mousebind button="Right" action="Press">
+				<action name="ShowMenu" menu="root-menu" />
+			</mousebind>
+		</context>
+		<context name="Frame">
+			<!-- Remove default keybindings -->
+			<mousebind button="A-Left" action="Drag" />
+			<mousebind button="A-Right" action="Drag" />
+
+			<mousebind button="W-Left" action="Drag">
+				<action name="Move" />
+				<action name="Raise" />
+			</mousebind>
+			<mousebind button="W-Right" action="Drag">
+				<action name="Resize" />
+				<action name="Raise" />
+			</mousebind>
+		</context>
+	</mouse>
+</labwc_config>
