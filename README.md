@@ -2,9 +2,16 @@
 
 ## ✨ Showcase
 ![SwayFX](screenshots/jellybeans_swayfx2.png "SwayFX")
+![LabWC](screenshots/tango_labwc.png "LabWC")
 ![SwayFX](screenshots/gruvbox_swayfx.png "SwayFX")
 
 ## 🌈 Rices
+<details>
+  <summary>Tango rice (LabWC, alacritty, yambar, bemenu)</summary>
+
+  ![LabWC](screenshots/tango_labwc.png "LabWC")
+</details>
+
 <details>
   <summary>jellybeans rice (SwayFX, alacritty, waybar, fuzzel)</summary>
 
